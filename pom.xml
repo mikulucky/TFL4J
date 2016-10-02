@@ -2,7 +2,7 @@
 <!--
 
     The MIT License
-    Copyright (c) 2016 Orange Foundry
+    Copyright (c) 2016 Josep McCarthy
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -101,7 +101,7 @@
                 <configuration>
                     <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>
                     <properties>
-                        <owner>Orange Foundry</owner>
+                        <owner>Josep McCarthy</owner>
                         <skipExistingHeaders>false</skipExistingHeaders>
                     </properties>
                 </configuration>

@@ -2,7 +2,7 @@
 <!--
 
     The MIT License
-    Copyright (c) 2016 Orange Foundry
+    Copyright (c) 2016 Josep McCarthy
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +23,6 @@
     THE SOFTWARE.
 
 -->
-
-
 <!DOCTYPE module PUBLIC
         "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
         "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
