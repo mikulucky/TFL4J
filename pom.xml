@@ -43,6 +43,32 @@
         <surefireplugin.version>2.12.4</surefireplugin.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -52,7 +78,7 @@
                 <version>${jacocoplugin.version}</version>
                 <executions>
                     <execution>
-                        <id>pre-unit-test</id>
+                        <updatePeriod>pre-unit-test</updatePeriod>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -62,7 +88,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>post-unit-test</id>
+                        <updatePeriod>post-unit-test</updatePeriod>
                         <phase>test</phase>
                         <goals>
                             <goal>report</goal>
@@ -73,7 +99,7 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>default-report</id>
+                        <updatePeriod>default-report</updatePeriod>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
@@ -107,7 +133,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>install-format</id>
+                        <updatePeriod>install-format</updatePeriod>
                         <phase>install</phase>
                         <goals>
                             <goal>format</goal>
@@ -121,7 +147,7 @@
                 <version>2.17</version>
                 <executions>
                     <execution>
-                        <id>validate</id>
+                        <updatePeriod>validate</updatePeriod>
                         <goals>
                             <goal>check</goal>
                         </goals>

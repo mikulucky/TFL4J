@@ -1,0 +1,44 @@
+{
+  "$id": "1",
+  "$type": "Tfl.Api.Presentation.Entities.LondonAirForecast, Tfl.Api.Presentation.Entities",
+  "updatePeriod": "hourly",
+  "updateFrequency": "1",
+  "forecastURL": "http://londonair.org.uk/forecast",
+  "disclaimerText": "This forecast is intended to provide information on expected pollution levels in areas of significant public exposure. It may not apply in very specific locations close to unusually strong or short-lived local sources of pollution.",
+  "currentForecast": [
+    {
+      "$id": "2",
+      "$type": "Tfl.Api.Presentation.Entities.CurrentForecast, Tfl.Api.Presentation.Entities",
+      "forecastType": "Current",
+      "forecastID": "11604",
+      "publishedDate": "2016-07-10T10:58:00Z",
+      "fromDate": "2016-08-10T00:00:00Z",
+      "toDate": "2016-10-10T23:59:00Z",
+      "forecastBand": "Low",
+      "forecastSummary": "Low air pollution forecast valid from Saturday 8 October to end of Monday 10 October GMT",
+      "nO2Band": "Low",
+      "o3Band": "Low",
+      "pM10Band": "Low",
+      "pM25Band": "Low",
+      "sO2Band": "Low",
+      "forecastText": "Saturday will be cloudy and some showers inland, with some heavier bursts along the east coast. Some warm sunny spells are likely, although it will remain cool with a breeze.<br/>The outlook for Sunday is cold, possibly bright start, although showers spreading inland later. Sunny spells and variable cloud Monday, but also showers, heavy at times.<br/><br/>Temperatures should remain cool with a moderate north-easterly breeze throughout the forecast period.<br/><br/>It's not expected we will import any significant pollution and local winds should ensure dispersal of emissions.<br/><br/>Air pollution is expected to remain 'Low' for the following pollutants during the forecast period:<br/><br/>Nitrogen Dioxide<br/>Ozone<br/>PM10 particulates<br/>PM2.5 particulates<br/>Sulphur Dioxide<br/><br/><br/><br/><br/><br/><br/>"
+    },
+    {
+      "$id": "3",
+      "$type": "Tfl.Api.Presentation.Entities.CurrentForecast, Tfl.Api.Presentation.Entities",
+      "forecastType": "Future",
+      "forecastID": "11604",
+      "publishedDate": "2016-07-10T10:58:00Z",
+      "fromDate": "2016-08-10T00:00:00Z",
+      "toDate": "2016-10-10T23:59:00Z",
+      "forecastBand": "Low",
+      "forecastSummary": "Low air pollution forecast valid from Saturday 8 October to end of Monday 10 October GMT",
+      "nO2Band": "Low",
+      "o3Band": "Low",
+      "pM10Band": "Low",
+      "pM25Band": "Low",
+      "sO2Band": "Low",
+      "forecastText": "Saturday will be cloudy and some showers inland, with some heavier bursts along the east coast. Some warm sunny spells are likely, although it will remain cool with a breeze.<br/>The outlook for Sunday is cold, possibly bright start, although showers spreading inland later. Sunny spells and variable cloud Monday, but also showers, heavy at times.<br/><br/>Temperatures should remain cool with a moderate north-easterly breeze throughout the forecast period.<br/><br/>It's not expected we will import any significant pollution and local winds should ensure dispersal of emissions.<br/><br/>Air pollution is expected to remain 'Low' for the following pollutants during the forecast period:<br/><br/>Nitrogen Dioxide<br/>Ozone<br/>PM10 particulates<br/>PM2.5 particulates<br/>Sulphur Dioxide<br/><br/><br/><br/><br/><br/><br/>"
+    }
+  ]
+}
