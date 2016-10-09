@@ -13,7 +13,6 @@ public abstract class AbstractService {
 
   private OkHttpClient client = new OkHttpClient();
   private ObjectMapper mapper = new ObjectMapper();
-  protected static final String TFL = "https://api.tfl.gov.uk/";
 
   protected OkHttpClient getClient() {
     return client;
