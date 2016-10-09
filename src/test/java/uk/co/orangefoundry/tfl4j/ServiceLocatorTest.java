@@ -26,6 +26,7 @@ import org.junit.Test;
 import uk.co.orangefoundry.tfl4j.airquality.AirQualityService;
 import uk.co.orangefoundry.tfl4j.airquality.dto.AirQuality;
 import uk.co.orangefoundry.tfl4j.bikepoint.BikePointService;
+import uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayService;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -46,5 +47,11 @@ public class ServiceLocatorTest {
   public void getBikePointService() throws Exception {
     BikePointService bikePointService = serviceLocator.getBikePointService();
     assertNotNull(bikePointService);
+  }
+
+  @Test
+  public void getCycleSuperHighwayService() throws Exception {
+    CycleSuperHighwayService cycleSuperHighwayService = serviceLocator.getCycleSuperHighwayService();
+    assertNotNull(cycleSuperHighwayService);
   }
 }

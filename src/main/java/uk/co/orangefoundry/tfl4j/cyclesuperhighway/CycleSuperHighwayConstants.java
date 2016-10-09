@@ -20,7 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
-public interface DTO {
+import uk.co.orangefoundry.tfl4j.ServiceConstants;
+
+public class CycleSuperHighwayConstants extends ServiceConstants{
+
+  public static final String CYCLE = TFL + "CycleSuperhighway/";
+  public static final String CYCLE_SEARCH = CYCLE + "%s";
+
 }

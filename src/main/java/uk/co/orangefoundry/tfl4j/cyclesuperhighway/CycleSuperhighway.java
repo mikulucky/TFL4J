@@ -20,7 +20,59 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
-public interface DTO {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.Date;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CycleSuperhighway { //todo support geometries
+
+  private String id;
+  private String label;
+  private String labelShort;
+  private boolean segmented;
+  private Date modified;
+
+  public boolean isSegmented() {
+    return segmented;
+  }
+
+  public void setSegmented(boolean segmented) {
+    this.segmented = segmented;
+  }
+
+  public Date getModified() {
+    return modified;
+  }
+
+  public void setModified(Date modified) {
+    this.modified = modified;
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public String getLabel() {
+    return label;
+  }
+
+  public void setLabel(String label) {
+    this.label = label;
+  }
+
+  public String getLabelShort() {
+    return labelShort;
+  }
+
+  public void setLabelShort(String labelShort) {
+    this.labelShort = labelShort;
+  }
+
 }

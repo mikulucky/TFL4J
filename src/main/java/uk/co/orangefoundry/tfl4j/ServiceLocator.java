@@ -24,14 +24,19 @@ package uk.co.orangefoundry.tfl4j;
 
 import uk.co.orangefoundry.tfl4j.airquality.AirQualityService;
 import uk.co.orangefoundry.tfl4j.bikepoint.BikePointService;
+import uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayService;
 
 public class ServiceLocator {
 
-  public AirQualityService getAirQualityService(){
+  public AirQualityService getAirQualityService() {
     return new AirQualityService();
   }
 
-  public BikePointService getBikePointService(){
+  public BikePointService getBikePointService() {
     return new BikePointService();
+  }
+
+  public CycleSuperHighwayService getCycleSuperHighwayService() {
+    return new CycleSuperHighwayService();
   }
 }

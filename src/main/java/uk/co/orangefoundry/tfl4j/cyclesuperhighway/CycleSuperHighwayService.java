@@ -20,7 +20,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
-public interface DTO {
+import uk.co.orangefoundry.tfl4j.AbstractService;
+
+import java.io.IOException;
+import java.util.List;
+
+import static uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayConstants.CYCLE;
+import static uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayConstants.CYCLE_SEARCH;
+
+public class CycleSuperHighwayService extends AbstractService {
+  public List<CycleSuperhighway> getAll() throws IOException {
+    return mapList(CycleSuperhighway.class, getData(CYCLE));
+  }
+
+  public CycleSuperhighway getOne(final String id) throws IOException {
+    String url = String.format(CYCLE_SEARCH,id);
+    return map(CycleSuperhighway.class,getData(url));
+  }
 }

@@ -20,7 +20,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
-public interface DTO {
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+
+public class CycleSuperHighwayServiceTest {
+
+  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService();
+
+  @Test
+  public void getAllHighways() throws Exception {
+    List<CycleSuperhighway> results = cycleSuperHighwayService.getAll();
+    assertNotNull(results);
+    assertFalse(results.isEmpty());
+  }
+
+  @Test
+  public void getOne() throws Exception {
+    CycleSuperhighway result = cycleSuperHighwayService.getOne("RMP-006");
+    assertNotNull(result);
+  }
 }
