@@ -31,7 +31,7 @@ public class Forecast {
 
   String forecastType;
   String forecastID;
-  String publishedDate;
+  Date publishedDate;
   Date fromDate;
   Date toDate;
   String forecastBand;
@@ -59,11 +59,11 @@ public class Forecast {
     this.forecastID = forecastID;
   }
 
-  public String getPublishedDate() {
+  public Date getPublishedDate() {
     return publishedDate;
   }
 
-  public void setPublishedDate(String publishedDate) {
+  public void setPublishedDate(Date publishedDate) {
     this.publishedDate = publishedDate;
   }
 

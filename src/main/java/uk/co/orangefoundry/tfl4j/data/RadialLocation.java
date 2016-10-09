@@ -13,7 +13,4 @@ public class RadialLocation extends Location {
     return radius;
   }
 
-  public void setRadius(int radius) {
-    this.radius = radius;
-  }
 }
