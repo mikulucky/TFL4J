@@ -22,30 +22,16 @@
  */
 package uk.co.orangefoundry.tfl4j.airquality;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import uk.co.orangefoundry.tfl4j.AbstractService;
 import uk.co.orangefoundry.tfl4j.airquality.dto.AirQuality;
 
 import java.io.IOException;
 
-public class AirQualityService {
+public class AirQualityService extends AbstractService{
 
-  private static final String URL = "https://api.tfl.gov.uk/AirQuality";
-
-  private OkHttpClient client = new OkHttpClient();
-  private ObjectMapper mapper = new ObjectMapper();
-
-
+  private static final String URL = TFL + "AirQuality";
 
   public AirQuality getAirQualityForecast() throws IOException { //todo attempt to cache this as only updated hourly
-    Request request = new Request.Builder()
-        .url(URL)
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, AirQuality.class);
+    return map(AirQuality.class,getData(URL));
   }
 }

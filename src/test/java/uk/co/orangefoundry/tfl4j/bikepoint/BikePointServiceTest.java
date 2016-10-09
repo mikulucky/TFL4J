@@ -1,7 +1,10 @@
 package uk.co.orangefoundry.tfl4j.bikepoint;
 
 import org.junit.Test;
-import uk.co.orangefoundry.tfl4j.bikepoint.result.PlacesResponse;
+import uk.co.orangefoundry.tfl4j.bikepoint.dto.BikePoint;
+import uk.co.orangefoundry.tfl4j.data.result.PlacesResponse;
+import uk.co.orangefoundry.tfl4j.data.Location;
+import uk.co.orangefoundry.tfl4j.data.RadialLocation;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package uk.co.orangefoundry.tfl4j.bikepoint;
+package uk.co.orangefoundry.tfl4j.data;
 
 public class Location {
 

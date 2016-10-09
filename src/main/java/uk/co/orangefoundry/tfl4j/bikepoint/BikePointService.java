@@ -1,77 +1,42 @@
 package uk.co.orangefoundry.tfl4j.bikepoint;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import uk.co.orangefoundry.tfl4j.bikepoint.result.PlacesResponse;
+import uk.co.orangefoundry.tfl4j.AbstractService;
+import uk.co.orangefoundry.tfl4j.bikepoint.dto.BikePoint;
+import uk.co.orangefoundry.tfl4j.data.result.PlacesResponse;
+import uk.co.orangefoundry.tfl4j.data.Location;
+import uk.co.orangefoundry.tfl4j.data.RadialLocation;
 
 import java.io.IOException;
 import java.util.List;
 
-public class BikePointService {
+public class BikePointService extends AbstractService{
 
-  private OkHttpClient client = new OkHttpClient();
-  private ObjectMapper mapper = new ObjectMapper();
+  private static final String BIKE_POINT = TFL + "BikePoint/";
 
   public List<BikePoint> getBikePointList() throws IOException {
-    Request request = new Request.Builder()
-        .url("https://api.tfl.gov.uk/BikePoint")
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, new TypeReference<List<BikePoint>>() {
-    });
+    return mapList(BikePoint.class,getData(BIKE_POINT));
   }
 
   public BikePoint getBikePoint(String id) throws IOException {
-    String url = "https://api.tfl.gov.uk/BikePoint/" + id;
-    Request request = new Request.Builder()
-        .url(url)
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, BikePoint.class);
+    String url = BIKE_POINT + id;
+    return map(BikePoint.class,getData(url));
   }
 
   public List<BikePoint> searchByName(String searchTerm) throws IOException {
-    String url = "https://api.tfl.gov.uk/BikePoint/Search?query=" + searchTerm;
-    Request request = new Request.Builder()
-        .url(url)
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, new TypeReference<List<BikePoint>>() {
-    });
+    String url = BIKE_POINT + "Search?query=" + searchTerm;
+    return mapList(BikePoint.class,getData(url));
   }
 
   public PlacesResponse searchByLocationWithRadius(RadialLocation location) throws IOException {
-    String url = "https://api.tfl.gov.uk/BikePoint?lat=" + location.getLatitude()
+    String url = BIKE_POINT+"?lat=" + location.getLatitude()
         + "&lon=" + location.getLongitude() + "&radius=" + location.getRadius();
-    Request request = new Request.Builder()
-        .url(url)
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, PlacesResponse.class);
+    return map(PlacesResponse.class,getData(url));
   }
 
   public List<BikePoint> searchByBoundingBox(Location sw, Location ne) throws IOException {
     //todo validate coordinates before passing to service
-    String url = "https://api.tfl.gov.uk/BikePoint?swLat="+sw.getLatitude()+
+    String url = BIKE_POINT + "?swLat=" +sw.getLatitude()+
         "&swLon="+sw.getLongitude()+"&neLat="+ne.getLatitude()+"&neLon="+ne.getLongitude();
-    Request request = new Request.Builder()
-        .url(url)
-        .build();
-
-    Response response = client.newCall(request).execute();
-    String data = response.body().string();
-    return mapper.readValue(data, new TypeReference<List<BikePoint>>() {
-    });
+    return mapList(BikePoint.class,getData(url));
   }
 }

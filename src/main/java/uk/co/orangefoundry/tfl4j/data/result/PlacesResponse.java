@@ -1,4 +1,4 @@
-package uk.co.orangefoundry.tfl4j.bikepoint.result;
+package uk.co.orangefoundry.tfl4j.data.result;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

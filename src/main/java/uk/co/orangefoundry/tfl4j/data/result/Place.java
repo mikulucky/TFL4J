@@ -1,7 +1,6 @@
-package uk.co.orangefoundry.tfl4j.bikepoint.result;
+package uk.co.orangefoundry.tfl4j.data.result;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import uk.co.orangefoundry.tfl4j.bikepoint.AdditionalProperty;
 
 import java.util.ArrayList;
 import java.util.List;

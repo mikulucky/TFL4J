@@ -1,12 +1,14 @@
-package uk.co.orangefoundry.tfl4j.bikepoint;
+package uk.co.orangefoundry.tfl4j.bikepoint.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import uk.co.orangefoundry.tfl4j.DTO;
+import uk.co.orangefoundry.tfl4j.data.result.AdditionalProperty;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BikePoint {
+public class BikePoint implements DTO {
   String id;
   String url;
   String commonName;

@@ -23,12 +23,13 @@
 package uk.co.orangefoundry.tfl4j.airquality.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import uk.co.orangefoundry.tfl4j.DTO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AirQuality {
+public class AirQuality implements DTO {
 
   private String updatePeriod;
   private String forecastURL;
