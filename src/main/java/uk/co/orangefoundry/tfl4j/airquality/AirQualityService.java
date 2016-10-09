@@ -39,7 +39,7 @@ public class AirQualityService {
 
 
 
-  public AirQuality getAirQualityForecast() throws IOException {
+  public AirQuality getAirQualityForecast() throws IOException { //todo attempt to cache this as only updated hourly
     Request request = new Request.Builder()
         .url(URL)
         .build();

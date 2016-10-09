@@ -23,10 +23,15 @@
 package uk.co.orangefoundry.tfl4j;
 
 import uk.co.orangefoundry.tfl4j.airquality.AirQualityService;
+import uk.co.orangefoundry.tfl4j.bikepoint.BikePointService;
 
 public class ServiceLocator {
 
   public AirQualityService getAirQualityService(){
     return new AirQualityService();
+  }
+
+  public BikePointService getBikePointService(){
+    return new BikePointService();
   }
 }
