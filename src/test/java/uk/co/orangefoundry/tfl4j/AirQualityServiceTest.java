@@ -72,8 +72,6 @@ public class AirQualityServiceTest {
     assertTrue(StringUtils.isNoneEmpty(forecast.getpM10Band()));
     assertTrue(StringUtils.isNoneEmpty(forecast.getsO2Band()));
     assertTrue(StringUtils.isNoneEmpty(forecast.getpM25Band()));
-    assertNotNull(forecast.getFromDate());
-    assertNotNull(forecast.getToDate());
     assertNotNull(forecast.getPublishedDate());
 
   }
