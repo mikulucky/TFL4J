@@ -23,6 +23,7 @@
 package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
 import uk.co.orangefoundry.tfl4j.AbstractService;
+import uk.co.orangefoundry.tfl4j.ClientWrapper;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,6 +32,11 @@ import static uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayConst
 import static uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayConstants.CYCLE_SEARCH;
 
 public class CycleSuperHighwayService extends AbstractService {
+
+  public CycleSuperHighwayService(ClientWrapper clientWrapper) {
+    super(clientWrapper);
+  }
+
   public List<CycleSuperhighway> getAll() throws IOException {
     return mapList(CycleSuperhighway.class, getData(CYCLE));
   }

@@ -23,6 +23,7 @@
 package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
 import org.junit.Test;
+import uk.co.orangefoundry.tfl4j.ClientWrapper;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class CycleSuperHighwayServiceTest {
 
-  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService();
+  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService(new ClientWrapper());
 
   @Test
   public void getAllHighways() throws Exception {

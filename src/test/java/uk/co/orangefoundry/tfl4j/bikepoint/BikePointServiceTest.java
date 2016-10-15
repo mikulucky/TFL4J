@@ -24,6 +24,7 @@ package uk.co.orangefoundry.tfl4j.bikepoint;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
+import uk.co.orangefoundry.tfl4j.ClientWrapper;
 import uk.co.orangefoundry.tfl4j.bikepoint.dto.BikePoint;
 import uk.co.orangefoundry.tfl4j.data.result.AdditionalProperty;
 import uk.co.orangefoundry.tfl4j.data.result.Place;
@@ -39,7 +40,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class BikePointServiceTest {
 
-  BikePointService bikePointService = new BikePointService();
+  BikePointService bikePointService = new BikePointService(new ClientWrapper());
   @Test
   public void testGetAllBikePoints() throws Exception {
     List<BikePoint> bikePointList = bikePointService.getBikePointList();
