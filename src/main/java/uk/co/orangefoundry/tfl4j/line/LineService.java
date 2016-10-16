@@ -32,6 +32,16 @@ public class LineService extends AbstractService {
    * @return
    * @throws IOException
    */
+  public List<Line> getRailLines() throws IOException {
+    return mapList(Line.class, getData("https://api.tfl.gov.uk/Line/Mode/national-rail"));
+  }
+
+  /**
+   * /Line/Mode/{modes}
+   *
+   * @return
+   * @throws IOException
+   */
   public List<Line> getBusLines() throws IOException {
     return mapList(Line.class, getData("https://api.tfl.gov.uk/Line/Mode/bus"));
   }
@@ -100,4 +110,6 @@ public class LineService extends AbstractService {
   public Line getLineRoute(String id) throws IOException {
     return map(Line.class,getData("https://api.tfl.gov.uk/Line/"+id+"/Route"));
   }
+
+
 }

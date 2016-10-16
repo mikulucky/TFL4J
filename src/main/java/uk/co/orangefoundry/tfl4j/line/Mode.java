@@ -2,7 +2,7 @@ package uk.co.orangefoundry.tfl4j.line;
 
 public enum Mode {
 
-  BUS("bus"),TUBE("tube");
+  BUS("bus"),TUBE("tube"),NATIONAL_RAIL("national-rail");
 
   private String name;
 

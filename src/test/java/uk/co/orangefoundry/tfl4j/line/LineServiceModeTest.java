@@ -32,6 +32,38 @@ public class LineServiceModeTest extends DataBasedTest{
   }
 
   @Test
+  public void testGetRailMode() throws Exception {
+    setMockResponse("https://api.tfl.gov.uk/Line/Mode/national-rail","data/line/mode/rail.json");
+    List<Line> lineList = lineService.getRailLines();
+    assertNotNull(lineList);
+    assertEquals(27,lineList.size());
+
+    Line line = lineList.get(0);
+    assertNotNull(line);
+    assertEquals("abellio-greater-anglia",line.getId());
+    assertEquals("Abellio Greater Anglia",line.getName());
+    assertEquals("national-rail",line.getModeName());
+    assertNotNull(line.getCreated());
+    assertNotNull(line.getModified());
+  }
+
+  @Test
+  public void testGetRailWithEnum() throws Exception {
+    setMockResponse("https://api.tfl.gov.uk/Line/Mode/national-rail","data/line/mode/rail.json");
+    List<Line> lineList = lineService.getLines(Mode.NATIONAL_RAIL);
+    assertNotNull(lineList);
+    assertEquals(27,lineList.size());
+
+    Line line = lineList.get(0);
+    assertNotNull(line);
+    assertEquals("abellio-greater-anglia",line.getId());
+    assertEquals("Abellio Greater Anglia",line.getName());
+    assertEquals("national-rail",line.getModeName());
+    assertNotNull(line.getCreated());
+    assertNotNull(line.getModified());
+  }
+
+  @Test
   public void testGetBusMode() throws Exception {
     setMockResponse("https://api.tfl.gov.uk/Line/Mode/bus","data/line/mode/bus.json");
     List<Line> lineList = lineService.getBusLines();
