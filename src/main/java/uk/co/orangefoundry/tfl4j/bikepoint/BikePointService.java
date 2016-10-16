@@ -23,6 +23,7 @@
 package uk.co.orangefoundry.tfl4j.bikepoint;
 
 import uk.co.orangefoundry.tfl4j.AbstractService;
+import uk.co.orangefoundry.tfl4j.ClientWrapper;
 import uk.co.orangefoundry.tfl4j.bikepoint.dto.BikePoint;
 import uk.co.orangefoundry.tfl4j.data.Location;
 import uk.co.orangefoundry.tfl4j.data.RadialLocation;
@@ -38,6 +39,10 @@ import static uk.co.orangefoundry.tfl4j.bikepoint.BikeServiceConstants.SEARCH;
 
 public class BikePointService extends AbstractService{
 
+
+  public BikePointService(ClientWrapper clientWrapper) {
+    super(clientWrapper);
+  }
 
   public List<BikePoint> getBikePointList() throws IOException {
     return mapList(BikePoint.class,getData(BIKE_POINT));

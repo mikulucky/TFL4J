@@ -28,15 +28,17 @@ import uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayService;
 
 public class ServiceLocator {
 
+  private ClientWrapper clientWrapper = new ClientWrapper();
+
   public AirQualityService getAirQualityService() {
-    return new AirQualityService();
+    return new AirQualityService(clientWrapper);
   }
 
   public BikePointService getBikePointService() {
-    return new BikePointService();
+    return new BikePointService(clientWrapper);
   }
 
   public CycleSuperHighwayService getCycleSuperHighwayService() {
-    return new CycleSuperHighwayService();
+    return new CycleSuperHighwayService(clientWrapper);
   }
 }

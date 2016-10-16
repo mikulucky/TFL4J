@@ -24,24 +24,30 @@ package uk.co.orangefoundry.tfl4j.bikepoint;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
+import uk.co.orangefoundry.tfl4j.DataBasedTest;
 import uk.co.orangefoundry.tfl4j.bikepoint.dto.BikePoint;
+import uk.co.orangefoundry.tfl4j.data.Location;
+import uk.co.orangefoundry.tfl4j.data.RadialLocation;
 import uk.co.orangefoundry.tfl4j.data.result.AdditionalProperty;
 import uk.co.orangefoundry.tfl4j.data.result.Place;
 import uk.co.orangefoundry.tfl4j.data.result.PlacesResponse;
-import uk.co.orangefoundry.tfl4j.data.Location;
-import uk.co.orangefoundry.tfl4j.data.RadialLocation;
 
 import java.util.List;
 
 import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
+import static org.mockito.Mockito.when;
+import static uk.co.orangefoundry.tfl4j.bikepoint.BikeServiceConstants.BOX_SEARCH;
 
-public class BikePointServiceTest {
+public class BikePointServiceTest  extends DataBasedTest {
 
-  BikePointService bikePointService = new BikePointService();
+  BikePointService bikePointService = new BikePointService(mockServer);
+
   @Test
   public void testGetAllBikePoints() throws Exception {
+    setMockResponse(BikeServiceConstants.BIKE_POINT,"data/bike/bikepoint.json");
+
     List<BikePoint> bikePointList = bikePointService.getBikePointList();
     assertNotNull(bikePointList);
     assertFalse(bikePointList.isEmpty());
@@ -49,12 +55,17 @@ public class BikePointServiceTest {
 
   @Test
   public void testGetBikePoint() throws Exception {
-    BikePoint bikePoint = bikePointService.getBikePoint("BikePoints_455");
+    String id = "BikePoints_455";
+
+    setMockResponse(BikeServiceConstants.BIKE_POINT + id,"data/bike/single.json");
+
+    BikePoint bikePoint = bikePointService.getBikePoint(id);
     assertNotNull(bikePoint);
   }
 
   @Test
   public void getBikePointByName() throws Exception {
+    when(mockServer.getData("https://api.tfl.gov.uk/BikePoint/Search?query=Napier Avenue")).thenReturn(getFile("data/bike/bikename.json"));
     final String searchTerm = "Napier Avenue";
     List<BikePoint> results = bikePointService.searchByName(searchTerm);
     assertNotNull(results);
@@ -63,6 +74,8 @@ public class BikePointServiceTest {
 
   @Test
   public void getBikePointsFromLocationAndRaduis() throws Exception {
+    setMockResponse("https://api.tfl.gov.uk/BikePoint/?lat=51.508447&lon=-0.055167&radius=500", "data/bike/bikeRadius.json");
+
     RadialLocation location = new RadialLocation(51.508447,-0.055167,500);
     PlacesResponse results = bikePointService.searchByLocationWithRadius(location);
     assertNotNull(results);
@@ -73,6 +86,9 @@ public class BikePointServiceTest {
   public void searchByBoundingBox() throws Exception {
     Location sw = new Location(51.508447,-0.055167);
     Location ne = new Location(51.708447,-0.035167);
+
+    setMockResponse(String.format(BOX_SEARCH,sw.getLatitude(),sw.getLongitude(),ne.getLatitude(),ne.getLongitude()),"data/bike/bikebox.json");
+
     List<BikePoint> placesResponse = bikePointService.searchByBoundingBox(sw, ne);
     assertNotNull(placesResponse);
     assertFalse(placesResponse.isEmpty());
@@ -81,6 +97,8 @@ public class BikePointServiceTest {
 
   @Test
   public void testPOJO() throws Exception {
+    setMockResponse("https://api.tfl.gov.uk/BikePoint/BikePoints_455","data/bike/single.json");
+
     BikePoint bikePoint = bikePointService.getBikePoint("BikePoints_455");
     assertNotNull(bikePoint);
 
@@ -98,6 +116,8 @@ public class BikePointServiceTest {
 
   @Test
   public void testPlaceResponse() throws Exception {
+    setMockResponse("https://api.tfl.gov.uk/BikePoint/?lat=51.508447&lon=-0.055167&radius=500","data/bike/bikeRadius.json");
+    
     RadialLocation location = new RadialLocation(51.508447,-0.055167,500);
     PlacesResponse results = bikePointService.searchByLocationWithRadius(location);
 

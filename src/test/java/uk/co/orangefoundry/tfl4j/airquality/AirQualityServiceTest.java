@@ -20,13 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.airquality;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
-import uk.co.orangefoundry.tfl4j.airquality.AirQualityService;
+import uk.co.orangefoundry.tfl4j.DataBasedTest;
 import uk.co.orangefoundry.tfl4j.airquality.dto.AirQuality;
 import uk.co.orangefoundry.tfl4j.airquality.dto.Forecast;
 
@@ -36,19 +36,23 @@ import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
 @RunWith(MockitoJUnitRunner.class)
-public class AirQualityServiceTest {
+public class AirQualityServiceTest extends DataBasedTest {
 
-  private AirQualityService airQualityService = new AirQualityService();
+  private AirQualityService airQualityService = new AirQualityService(mockServer);
 
   @Test
   public void testGetAirQuality() throws Exception {
+    setMockResponse(AirQualityServiceConstants.AIR_QUALITY_SERVICE,"data/air/airquality.json");
     AirQuality airQualityForecast = airQualityService.getAirQualityForecast();
     assertNotNull(airQualityForecast);
     assertFalse(airQualityForecast.getCurrentForecast().isEmpty());
   }
 
+
   @Test
   public void testPoJo() throws Exception {
+    setMockResponse(AirQualityServiceConstants.AIR_QUALITY_SERVICE,"data/air/airquality.json");
+
     AirQuality airQualityForecast = airQualityService.getAirQualityForecast();
     assertNotNull(airQualityForecast);
     assertTrue(StringUtils.isNoneEmpty(airQualityForecast.getDisclaimerText()));

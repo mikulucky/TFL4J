@@ -1,0 +1,14 @@
+[
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+    "id": "BikePoints_454",
+    "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_454",
+    "commonName": "Napier Avenue, Millwall",
+    "placeType": "BikePoint",
+    "additionalProperties": [],
+    "children": [],
+    "childrenUrls": [],
+    "lat": 51.487679,
+    "lon": -0.021582
+  }
+]
