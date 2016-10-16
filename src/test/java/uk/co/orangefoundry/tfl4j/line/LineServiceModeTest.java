@@ -11,7 +11,7 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
 @RunWith(MockitoJUnitRunner.class)
-public class LineServiceTest extends DataBasedTest{
+public class LineServiceModeTest extends DataBasedTest{
 
   private LineService lineService = new LineService(mockServer);
 
