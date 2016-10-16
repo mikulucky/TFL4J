@@ -1,0 +1,519 @@
+{
+  "$type": "Tfl.Api.Presentation.Entities.PlacesResponse, Tfl.Api.Presentation.Entities",
+  "centrePoint": [
+    51.508,
+    -0.055
+  ],
+  "places": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_453",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_453",
+      "commonName": "Garnet Street, Shadwell",
+      "distance": 51.074259831442696,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "200045",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "1326111060000",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "7",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "16",
+          "modified": "2016-10-15T18:00:29.57Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "24",
+          "modified": "2016-10-15T18:00:29.57Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.508447,
+      "lon": -0.055167
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_488",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_488",
+      "commonName": "Reardon Street, Wapping",
+      "distance": 280.6663014925245,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "022176",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "1327254960000",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "5",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "17",
+          "modified": "2016-10-15T19:00:37.827Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "22",
+          "modified": "2016-10-15T19:00:37.827Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.506946,
+      "lon": -0.058681
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_511",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_511",
+      "commonName": "Sutton Street, Shadwell",
+      "distance": 355.5361416441018,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "200256",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "1327937940000",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "13",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "20",
+          "modified": "2016-10-15T19:05:44.027Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "33",
+          "modified": "2016-10-15T19:05:44.027Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.511066,
+      "lon": -0.053558
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_449",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_449",
+      "commonName": "Shadwell Station, Shadwell",
+      "distance": 374.79351588534888,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "200020",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "1325952900000",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "6",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "29",
+          "modified": "2016-10-15T17:55:28.357Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "35",
+          "modified": "2016-10-15T17:55:28.357Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.511088,
+      "lon": -0.057159
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_458",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_458",
+      "commonName": "Wapping Lane, Wapping",
+      "distance": 402.44146167812812,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "200034",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "1326294780000",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "23",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "3",
+          "modified": "2016-10-15T18:50:36.933Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "28",
+          "modified": "2016-10-15T18:50:36.933Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.504749,
+      "lon": -0.057544
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+      "id": "BikePoints_552",
+      "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_552",
+      "commonName": "Watney Street, Shadwell",
+      "distance": 410.75531757412313,
+      "placeType": "BikePoint",
+      "additionalProperties": [
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "TerminalName",
+          "sourceSystemKey": "BikePoints",
+          "value": "200149",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Installed",
+          "sourceSystemKey": "BikePoints",
+          "value": "true",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Locked",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "InstallDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "RemovalDate",
+          "sourceSystemKey": "BikePoints",
+          "value": "",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "Temporary",
+          "sourceSystemKey": "BikePoints",
+          "value": "false",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbBikes",
+          "sourceSystemKey": "BikePoints",
+          "value": "14",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbEmptyDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "13",
+          "modified": "2016-10-15T18:55:37.663Z"
+        },
+        {
+          "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+          "category": "Description",
+          "key": "NbDocks",
+          "sourceSystemKey": "BikePoints",
+          "value": "27",
+          "modified": "2016-10-15T18:55:37.663Z"
+        }
+      ],
+      "children": [],
+      "lat": 51.511542,
+      "lon": -0.056667
+    }
+  ]
+}

@@ -25,6 +25,7 @@ package uk.co.orangefoundry.tfl4j.airquality;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import uk.co.orangefoundry.tfl4j.ClientWrapper;
 import uk.co.orangefoundry.tfl4j.airquality.dto.AirQuality;
@@ -34,21 +35,26 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class AirQualityServiceTest {
+public class AirQualityServiceTest extends DataBasedTest{
 
-  private AirQualityService airQualityService = new AirQualityService(new ClientWrapper());
+  private ClientWrapper mockServer = Mockito.mock(ClientWrapper.class);
+  private AirQualityService airQualityService = new AirQualityService(mockServer);
 
   @Test
   public void testGetAirQuality() throws Exception {
+    when(mockServer.getData(AirQualityServiceConstants.AIR_QUALITY_SERVICE)).thenReturn(getFile("data/air/airquality.json"));
     AirQuality airQualityForecast = airQualityService.getAirQualityForecast();
     assertNotNull(airQualityForecast);
     assertFalse(airQualityForecast.getCurrentForecast().isEmpty());
   }
 
+
   @Test
   public void testPoJo() throws Exception {
+    when(mockServer.getData(AirQualityServiceConstants.AIR_QUALITY_SERVICE)).thenReturn(getFile("data/air/airquality.json"));
     AirQuality airQualityForecast = airQualityService.getAirQualityForecast();
     assertNotNull(airQualityForecast);
     assertTrue(StringUtils.isNoneEmpty(airQualityForecast.getDisclaimerText()));
@@ -72,7 +78,7 @@ public class AirQualityServiceTest {
     assertTrue(StringUtils.isNoneEmpty(forecast.getpM10Band()));
     assertTrue(StringUtils.isNoneEmpty(forecast.getsO2Band()));
     assertTrue(StringUtils.isNoneEmpty(forecast.getpM25Band()));
-//    assertNotNull(forecast.getPublishedDate());
+    assertNotNull(forecast.getPublishedDate());
 
   }
 }

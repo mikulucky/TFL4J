@@ -10,7 +10,7 @@ public class ClientWrapper {
 
   private OkHttpClient okHttpClient = new OkHttpClient();
 
-  String getData(String url) throws IOException {
+  public String getData(String url) throws IOException {
     Request request = new Request.Builder()
         .url(url)
         .build();
