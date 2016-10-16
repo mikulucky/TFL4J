@@ -25,6 +25,7 @@ package uk.co.orangefoundry.tfl4j;
 import uk.co.orangefoundry.tfl4j.airquality.AirQualityService;
 import uk.co.orangefoundry.tfl4j.bikepoint.BikePointService;
 import uk.co.orangefoundry.tfl4j.cyclesuperhighway.CycleSuperHighwayService;
+import uk.co.orangefoundry.tfl4j.line.LineService;
 
 public class ServiceLocator {
 
@@ -40,5 +41,9 @@ public class ServiceLocator {
 
   public CycleSuperHighwayService getCycleSuperHighwayService() {
     return new CycleSuperHighwayService(clientWrapper);
+  }
+
+  public LineService getLineService(){
+    return new LineService(clientWrapper);
   }
 }
