@@ -2,7 +2,9 @@ package uk.co.orangefoundry.tfl4j.line;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Line {
@@ -12,6 +14,7 @@ public class Line {
   private String modeName;
   private Date created;
   private Date modified;
+  private List<RouteSection> routeSections = new ArrayList<RouteSection>();
 
   public String getId() {
     return id;
@@ -51,5 +54,13 @@ public class Line {
 
   public void setModified(Date modified) {
     this.modified = modified;
+  }
+
+  public List<RouteSection> getRouteSections() {
+    return routeSections;
+  }
+
+  public void setRouteSections(List<RouteSection> routeSections) {
+    this.routeSections = routeSections;
   }
 }

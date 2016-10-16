@@ -77,6 +77,5 @@ public class AirQualityServiceTest extends DataBasedTest {
     assertTrue(StringUtils.isNoneEmpty(forecast.getsO2Band()));
     assertTrue(StringUtils.isNoneEmpty(forecast.getpM25Band()));
     assertNotNull(forecast.getPublishedDate());
-
   }
 }
