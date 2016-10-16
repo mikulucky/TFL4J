@@ -1,0 +1,79 @@
+[
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "stopBlocking",
+    "categoryDescription": "RealTime",
+    "description": "Routes 170 211 not serving this stop",
+    "created": "2016-09-26T10:49:00Z",
+    "lastUpdate": "2016-09-26T13:56:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "Buses in the Canada Water, Limehouse, London Bridge, Southwark, Tower Hill and Waterloo areas delayed up to forty minutes and some services may terminate early due to the planned closure of Tower Bridge. Allow extra time for your journey and follow @TfLBusAlerts on Twitter for realtime information.",
+    "created": "2016-09-05T12:49:00Z",
+    "lastUpdate": "2016-09-25T14:11:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "Due to extensive roadworks and temporary traffic signals at Hillrise, Queens Road / Star&Garter Hill and Petersham Road the area of  Richmond is likely to suffer from congestion this weekend",
+    "created": "2016-10-14T11:04:00Z",
+    "lastUpdate": "2016-10-14T11:12:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "BERKELEY STREET - Route C2 towards Victoria is on diversion until Monday 17th October due to emergency repair work to fix a burst water main. Buses are diverting from Berkeley Square at Berkeley Street divert via turning left Fitzmaurice Place, ahead Curzon Street, left Bolton Street, right Piccadilly to line of route.",
+    "created": "2016-10-15T02:37:00Z",
+    "lastUpdate": "2016-10-15T02:46:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "Route U4 on diversion via Bourne Avenue and Mildred Avenue due to closure of Pinkwell Lane Hayes for a burst water main",
+    "created": "2016-10-15T16:27:00Z",
+    "lastUpdate": "2016-10-15T16:30:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "AERODROME ROAD - Route 186 is on diversion due to the ATS at junction with Watford Way. Buses are diverting for safety reasons. Buses from Aerodrome Road at junction with A41 are using Watford Way, then Fiveways Corner before turning around and using Watford Way again. Delays are to be expected.",
+    "created": "2016-10-15T19:29:00Z",
+    "lastUpdate": "2016-10-15T19:34:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "LORDSHIP LANE - Route 318 is on diversion due to a police incident. Buses are diverting eastbound from Lordship Lane, right Bruce Grove, left High road, right Landsdowne Road to normal line of route. Diversion is in both directions.",
+    "created": "2016-10-15T23:42:00Z",
+    "lastUpdate": "2016-10-16T08:02:00Z",
+    "affectedRoutes": [],
+    "affectedStops": []
+  }
+]

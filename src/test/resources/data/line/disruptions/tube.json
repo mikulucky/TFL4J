@@ -1,0 +1,12 @@
+[
+  {
+    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+    "category": "RealTime",
+    "type": "lineInfo",
+    "categoryDescription": "RealTime",
+    "description": "Waterloo and City Line: Train service will resume at 06:15 on Monday. ",
+    "affectedRoutes": [],
+    "affectedStops": [],
+    "closureText": "serviceClosed"
+  }
+]
