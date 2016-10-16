@@ -31,4 +31,8 @@ public class LineService extends AbstractService{
   public List<Disruption> getBusDisruptions() throws IOException {
     return mapList(Disruption.class,getData("https://api.tfl.gov.uk/Line/Mode/bus/Disruption"));
   }
+
+  public List<Disruption> getDisruptions(Mode mode) throws IOException {
+    return mapList(Disruption.class,getData("https://api.tfl.gov.uk/Line/Mode/" + mode.getName() + "/Disruption"));
+  }
 }
