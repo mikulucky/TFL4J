@@ -23,25 +23,21 @@
 package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
 import org.junit.Test;
-import org.mockito.Mockito;
-import uk.co.orangefoundry.tfl4j.ClientWrapper;
-import uk.co.orangefoundry.tfl4j.airquality.DataBasedTest;
+import uk.co.orangefoundry.tfl4j.DataBasedTest;
 
 import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.when;
 
 public class CycleSuperHighwayServiceTest extends DataBasedTest {
 
-  private ClientWrapper mock = Mockito.mock(ClientWrapper.class);
-  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService(mock);
+  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService(mockServer);
 
   @Test
   public void getAllHighways() throws Exception {
-    when(mock.getData(anyString())).thenReturn(getFile("data/cycle/all.json"));
+    setMockResponse("data/cycle/all.json");
+
     List<CycleSuperhighway> results = cycleSuperHighwayService.getAll();
     assertNotNull(results);
     assertFalse(results.isEmpty());
@@ -49,7 +45,7 @@ public class CycleSuperHighwayServiceTest extends DataBasedTest {
 
   @Test
   public void getOne() throws Exception {
-    when(mock.getData(anyString())).thenReturn(getFile("data/cycle/single.json"));
+    setMockResponse("data/cycle/single.json");
     CycleSuperhighway result = cycleSuperHighwayService.getOne("RMP-006");
     assertNotNull(result);
   }
