@@ -1,0 +1,84 @@
+{
+  "$type": "Tfl.Api.Presentation.Entities.Place, Tfl.Api.Presentation.Entities",
+  "id": "BikePoints_455",
+  "url": "https://api-argon.tfl.gov.uk/Place/BikePoints_455",
+  "commonName": "East Ferry Road, Cubitt Town",
+  "placeType": "BikePoint",
+  "additionalProperties": [
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "TerminalName",
+      "sourceSystemKey": "BikePoints",
+      "value": "200031",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "Installed",
+      "sourceSystemKey": "BikePoints",
+      "value": "true",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "Locked",
+      "sourceSystemKey": "BikePoints",
+      "value": "false",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "InstallDate",
+      "sourceSystemKey": "BikePoints",
+      "value": "1326117780000",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "RemovalDate",
+      "sourceSystemKey": "BikePoints",
+      "value": "",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "Temporary",
+      "sourceSystemKey": "BikePoints",
+      "value": "false",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "NbBikes",
+      "sourceSystemKey": "BikePoints",
+      "value": "10",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "NbEmptyDocks",
+      "sourceSystemKey": "BikePoints",
+      "value": "7",
+      "modified": "2016-10-15T16:15:10.44Z"
+    },
+    {
+      "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+      "category": "Description",
+      "key": "NbDocks",
+      "sourceSystemKey": "BikePoints",
+      "value": "17",
+      "modified": "2016-10-15T16:15:10.44Z"
+    }
+  ],
+  "children": [],
+  "lat": 51.49447,
+  "lon": -0.014409
+}

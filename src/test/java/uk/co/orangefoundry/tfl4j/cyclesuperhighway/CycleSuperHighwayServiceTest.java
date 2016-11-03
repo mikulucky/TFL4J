@@ -23,18 +23,21 @@
 package uk.co.orangefoundry.tfl4j.cyclesuperhighway;
 
 import org.junit.Test;
+import uk.co.orangefoundry.tfl4j.DataBasedTest;
 
 import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
-public class CycleSuperHighwayServiceTest {
+public class CycleSuperHighwayServiceTest extends DataBasedTest {
 
-  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService();
+  CycleSuperHighwayService cycleSuperHighwayService = new CycleSuperHighwayService(mockServer);
 
   @Test
   public void getAllHighways() throws Exception {
+    setMockResponse("data/cycle/all.json");
+
     List<CycleSuperhighway> results = cycleSuperHighwayService.getAll();
     assertNotNull(results);
     assertFalse(results.isEmpty());
@@ -42,6 +45,7 @@ public class CycleSuperHighwayServiceTest {
 
   @Test
   public void getOne() throws Exception {
+    setMockResponse("data/cycle/single.json");
     CycleSuperhighway result = cycleSuperHighwayService.getOne("RMP-006");
     assertNotNull(result);
   }

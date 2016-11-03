@@ -22,35 +22,51 @@
  */
 package uk.co.orangefoundry.tfl4j;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.mockito.Mockito;
 
 import java.io.IOException;
-import java.util.List;
 
-public abstract class AbstractService {
+import static junit.framework.TestCase.fail;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.when;
 
-  private ObjectMapper mapper = new ObjectMapper();
-  ClientWrapper clientWrapper;
+public abstract class DataBasedTest {
 
-  public AbstractService(ClientWrapper clientWrapper) {
-    this.clientWrapper = clientWrapper;
+  protected ClientWrapper mockServer;
+
+  public DataBasedTest() {
+    mockServer = Mockito.mock(ClientWrapper.class);
   }
 
-  protected ObjectMapper getMapper() {
-    return mapper;
+  protected void setMockResponse(String url, String expectedJson) {
+    try {
+      if (StringUtils.isNotEmpty(url)) {
+        when(mockServer.getData(url)).thenReturn(getFile(expectedJson));
+      } else {
+        when(mockServer.getData(anyString())).thenReturn(getFile(expectedJson));
+      }
+    } catch (IOException e) {
+      fail("IO Exception Thrown");
+    }
   }
 
-  protected <T> T map(Class<T> clazz, String json) throws IOException {
-    return mapper.readValue(json, clazz);
+  protected void setMockResponse(String expectedJson) {
+    setMockResponse(null,expectedJson);
   }
+  protected String getFile(String fileName) {
 
-  protected <T> List<T> mapList(Class<T> clazz, String json) throws IOException {
-    return getMapper().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
+    String result = "";
+
+    ClassLoader classLoader = getClass().getClassLoader();
+    try {
+      result = IOUtils.toString(classLoader.getResourceAsStream(fileName));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return result;
+
   }
-
-  protected String getData(final String url) throws IOException {
-    return clientWrapper.getData(url);
-  }
-
-
 }

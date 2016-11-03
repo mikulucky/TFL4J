@@ -20,37 +20,69 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.line;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-public abstract class AbstractService {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Line {
 
-  private ObjectMapper mapper = new ObjectMapper();
-  ClientWrapper clientWrapper;
+  private String id;
+  private String name;
+  private String modeName;
+  private Date created;
+  private Date modified;
+  private List<RouteSection> routeSections = new ArrayList<RouteSection>();
 
-  public AbstractService(ClientWrapper clientWrapper) {
-    this.clientWrapper = clientWrapper;
+  public String getId() {
+    return id;
   }
 
-  protected ObjectMapper getMapper() {
-    return mapper;
+  public void setId(String id) {
+    this.id = id;
   }
 
-  protected <T> T map(Class<T> clazz, String json) throws IOException {
-    return mapper.readValue(json, clazz);
+  public String getName() {
+    return name;
   }
 
-  protected <T> List<T> mapList(Class<T> clazz, String json) throws IOException {
-    return getMapper().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
+  public void setName(String name) {
+    this.name = name;
   }
 
-  protected String getData(final String url) throws IOException {
-    return clientWrapper.getData(url);
+  public String getModeName() {
+    return modeName;
   }
 
+  public void setModeName(String modeName) {
+    this.modeName = modeName;
+  }
 
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(Date created) {
+    this.created = created;
+  }
+
+  public Date getModified() {
+    return modified;
+  }
+
+  public void setModified(Date modified) {
+    this.modified = modified;
+  }
+
+  public List<RouteSection> getRouteSections() {
+    return routeSections;
+  }
+
+  public void setRouteSections(List<RouteSection> routeSections) {
+    this.routeSections = routeSections;
+  }
 }

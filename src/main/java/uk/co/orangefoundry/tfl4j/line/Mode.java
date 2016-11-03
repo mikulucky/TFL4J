@@ -20,37 +20,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.line;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+public enum Mode {
 
-import java.io.IOException;
-import java.util.List;
+  BUS("bus"),TUBE("tube"),NATIONAL_RAIL("national-rail");
 
-public abstract class AbstractService {
+  private String name;
 
-  private ObjectMapper mapper = new ObjectMapper();
-  ClientWrapper clientWrapper;
-
-  public AbstractService(ClientWrapper clientWrapper) {
-    this.clientWrapper = clientWrapper;
+  Mode(String name) {
+    this.name = name;
   }
 
-  protected ObjectMapper getMapper() {
-    return mapper;
+  public String getName() {
+    return name;
   }
-
-  protected <T> T map(Class<T> clazz, String json) throws IOException {
-    return mapper.readValue(json, clazz);
-  }
-
-  protected <T> List<T> mapList(Class<T> clazz, String json) throws IOException {
-    return getMapper().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
-  }
-
-  protected String getData(final String url) throws IOException {
-    return clientWrapper.getData(url);
-  }
-
-
 }

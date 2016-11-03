@@ -20,37 +20,56 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package uk.co.orangefoundry.tfl4j;
+package uk.co.orangefoundry.tfl4j.line;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.io.IOException;
-import java.util.List;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Disruption {
 
-public abstract class AbstractService {
+  private String category;
+  private String type;
+  private String categoryDescription;
+  private String description;
+  private String closureText;
 
-  private ObjectMapper mapper = new ObjectMapper();
-  ClientWrapper clientWrapper;
-
-  public AbstractService(ClientWrapper clientWrapper) {
-    this.clientWrapper = clientWrapper;
+  public String getCategory() {
+    return category;
   }
 
-  protected ObjectMapper getMapper() {
-    return mapper;
+  public void setCategory(String category) {
+    this.category = category;
   }
 
-  protected <T> T map(Class<T> clazz, String json) throws IOException {
-    return mapper.readValue(json, clazz);
+  public String getType() {
+    return type;
   }
 
-  protected <T> List<T> mapList(Class<T> clazz, String json) throws IOException {
-    return getMapper().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
+  public void setType(String type) {
+    this.type = type;
   }
 
-  protected String getData(final String url) throws IOException {
-    return clientWrapper.getData(url);
+  public String getCategoryDescription() {
+    return categoryDescription;
   }
 
+  public void setCategoryDescription(String categoryDescription) {
+    this.categoryDescription = categoryDescription;
+  }
 
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getClosureText() {
+    return closureText;
+  }
+
+  public void setClosureText(String closureText) {
+    this.closureText = closureText;
+  }
 }

@@ -22,35 +22,22 @@
  */
 package uk.co.orangefoundry.tfl4j;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.List;
 
-public abstract class AbstractService {
+public class ClientWrapper {
 
-  private ObjectMapper mapper = new ObjectMapper();
-  ClientWrapper clientWrapper;
+  private OkHttpClient okHttpClient = new OkHttpClient();
 
-  public AbstractService(ClientWrapper clientWrapper) {
-    this.clientWrapper = clientWrapper;
+  public String getData(String url) throws IOException {
+    Request request = new Request.Builder()
+        .url(url)
+        .build();
+
+    Response response = okHttpClient.newCall(request).execute();
+    return response.body().string();
   }
-
-  protected ObjectMapper getMapper() {
-    return mapper;
-  }
-
-  protected <T> T map(Class<T> clazz, String json) throws IOException {
-    return mapper.readValue(json, clazz);
-  }
-
-  protected <T> List<T> mapList(Class<T> clazz, String json) throws IOException {
-    return getMapper().readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
-  }
-
-  protected String getData(final String url) throws IOException {
-    return clientWrapper.getData(url);
-  }
-
-
 }
